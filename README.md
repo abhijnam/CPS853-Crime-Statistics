@@ -29,11 +29,15 @@ Storage format: Postgres
 
 #### Why?
 
-*First Option*
+###### First Option: Postgres
+
+
 Postgres handles ACID properties as data scales. It allows multiple concurrent read, write on the database per user which is useful when handling crime data as each precinct would need to update the database of crimes. Postgres also scales horizontally and vertically when data size gets large 
 
 
-*Other Alternative: MongoDB*
+###### Other Alternative: MongoDB
+
+
 MongoDB is a non-relational database for unstructured data that has a schema that is frequently changing. For a national crime database, the columns have to be consistent over the years as there are often people who retire and new personnel changes happening, so if the data is consistent it is easier to translate and document to train others. Hence for this use case, we require a relational database such as Postgres, which can scale in terms of storage over the years, and helps with concurrent read, write transactions with lossless changes.
 
 ### Our Focus
