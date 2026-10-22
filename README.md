@@ -4,11 +4,19 @@ As part of Creating Big Data Systems Course Project
 # Proposal
 
 
-*Dataset link* - [Crime Data from 2020 to 2024](https://catalog.data.gov/dataset/crime-data-from-2020-to-present)
-*License* - Public Domain
-*Size in rows*: 1,004,894
-*Megabytes*: 288 MB
-*Event time column* : TIME OCC 
+**Dataset link**  - [Crime Data from 2020 to 2024](https://catalog.data.gov/dataset/crime-data-from-2020-to-present)
+
+
+**License** - Public Domain
+
+
+**Size in rows**: 1,004,894
+
+
+**Megabytes**: 288 MB
+
+
+**Event time column** : TIME OCC 
 
 
 The reason that we chose this dataset is because we want to explore which recorded crime types are the most common and how incident counts differ between police areas. The dataset also makes a bridge between a real world topic and the technical work of utilizing a dataset. 
