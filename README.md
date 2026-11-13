@@ -61,19 +61,19 @@ Average query response times (in milliseconds) for our three main questions befo
 
 
 #### Two Biggest Risks
-Two Biggest Risks & Mitigation Plans
+
 
 
 Risk 1: Resource constraints on one laptop: Running Kafka, Spark, PostgreSQL, and Docker together on a single laptop with 8GB of memory could lead to out-of-memory (OOM) errors and resource exhaustion.
 
 
-o	Plan: Optimize Spark executor/driver RAM limits, enforce lower Docker memory footprints, use micro-batches for the Kafka stream to maintain low window buffers, and process raw files iteratively.
+  Plan: Optimize Spark executor/driver RAM limits, enforce lower Docker memory footprints, use micro-batches for the Kafka stream to maintain low window buffers, and process raw files iteratively.
 
 
 Risk 2: Scope and coordination for two people: Completing four complex, end-to-end modules within the project constraints with just a two-person team.
 
 
-o	Plan: Define strict module interfaces, divide work incrementally, use a shared Git repository with feature branches, and test the ingestion pipeline early using smaller data samples.
+  Plan: Define strict module interfaces, divide work incrementally, use a shared Git repository with feature branches, and test the ingestion pipeline early using smaller data samples.
 
 
 
