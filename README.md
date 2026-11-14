@@ -57,7 +57,7 @@ Average query response times (in milliseconds) for our three main questions befo
 Achieve at least a 50% decrease in average query execution time under simultaneous batch-and-stream load, or maintain sub-50ms query response times.
 
 
-
+### Risk Mitigation
 
 #### Two Biggest Risks
 
