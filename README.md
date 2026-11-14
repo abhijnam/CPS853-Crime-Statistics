@@ -38,23 +38,23 @@ The reason that we chose this dataset is because we want to explore which record
 •	Explanation: Parquet uses columnar compression, reduces disk usage, and accelerates read times for Spark compared to row-based CSV.
 
 
-### Serve 
+# Serve
 
-#### Our Focus: Postgres
+## Our Focus: Postgres
+Postgres handles **ACID properties** as data scales. It allows multiple concurrent reads and writes on the database per user, which is essential when handling crime data, as each precinct needs to update the database simultaneously. Postgres also scales horizontally and vertically as data size grows.
 
+---
 
-Postgres handles ACID properties as data scales. It allows multiple concurrent read, write on the database per user which is useful when handling crime data as each precinct would need to update the database of crimes. Postgres also scales horizontally and vertically when data size gets large 
+### 🛠 Action Plan
 
+* **What will we change?**
+  Introduce PostgreSQL database indexes—such as `B-Tree` indexes on frequently queried columns like `crime type`, `LAPD area`, and `timestamp`—and perform database tuning.
 
-##### <u>What will we change?</u>
-Introduce PostgreSQL database indexes (such as B-Tree indexes on frequently queried columns like crime type, LAPD area, and timestamp) and perform database tuning.
+* **What will we measure?**
+  Average query response times (in milliseconds) for our three main questions before and after adding the indexes.
 
-
-##### <u>What will we measure?</u>
-Average query response times (in milliseconds) for our three main questions before and after adding the indexes.
-
-##### <u>What success looks like?</u>
-Achieve at least a 50% decrease in average query execution time under simultaneous batch-and-stream load, or maintain sub-50ms query response times.
+> **🎯 What success looks like:**
+> Achieve at least a **50% decrease** in average query execution time under simultaneous batch-and-stream load, or maintain **sub-50ms** query response times.
 
 
 ### Risk Mitigation
