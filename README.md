@@ -46,14 +46,14 @@ The reason that we chose this dataset is because we want to explore which record
 Postgres handles ACID properties as data scales. It allows multiple concurrent read, write on the database per user which is useful when handling crime data as each precinct would need to update the database of crimes. Postgres also scales horizontally and vertically when data size gets large 
 
 
-<u>##### What will we change?</u>
+##### <u>What will we change?</u>
 Introduce PostgreSQL database indexes (such as B-Tree indexes on frequently queried columns like crime type, LAPD area, and timestamp) and perform database tuning.
 
 
-<u>##### What will we measure?</u>
+##### <u>What will we measure?</u>
 Average query response times (in milliseconds) for our three main questions before and after adding the indexes.
 
-<u>##### What success looks like?</u>
+##### <u>What success looks like?</u>
 Achieve at least a 50% decrease in average query execution time under simultaneous batch-and-stream load, or maintain sub-50ms query response times.
 
 
@@ -63,14 +63,14 @@ Achieve at least a 50% decrease in average query execution time under simultaneo
 
 
 
-<u>##### Risk 1</u>
+##### <u>Risk 1</u>
 Resource constraints on one laptop: Running Kafka, Spark, PostgreSQL, and Docker together on a single laptop with 8GB of memory could lead to out-of-memory (OOM) errors and resource exhaustion.
 
 
   + Plan: Optimize Spark executor/driver RAM limits, enforce lower Docker memory footprints, use micro-batches for the Kafka stream to maintain low window buffers, and process raw files iteratively.
 
 
-<u>##### Risk 2</u>
+##### <u>Risk 2</u>
 Scope and coordination for two people: Completing four complex, end-to-end modules within the project constraints with just a two-person team.
 
 
