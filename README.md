@@ -40,20 +40,20 @@ The reason that we chose this dataset is because we want to explore which record
 
 ### Serve 
 
-###### Our Focus: Postgres
+#### Our Focus: Postgres
 
 
 Postgres handles ACID properties as data scales. It allows multiple concurrent read, write on the database per user which is useful when handling crime data as each precinct would need to update the database of crimes. Postgres also scales horizontally and vertically when data size gets large 
 
 
-#### What will we change?
+##### What will we change?
 Introduce PostgreSQL database indexes (such as B-Tree indexes on frequently queried columns like crime type, LAPD area, and timestamp) and perform database tuning.
 
 
-#### What will we measure?
+##### What will we measure?
 Average query response times (in milliseconds) for our three main questions before and after adding the indexes.
 
-#### What success looks like?
+##### What success looks like?
 Achieve at least a 50% decrease in average query execution time under simultaneous batch-and-stream load, or maintain sub-50ms query response times.
 
 
