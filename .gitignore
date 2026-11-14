@@ -1,0 +1,11 @@
+# Secrets
+.env
+
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+
+# Large data files
+*.csv
+*.parquet
+*.parquet/
