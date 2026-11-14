@@ -54,9 +54,8 @@ Introduce PostgreSQL database indexes (such as B-Tree indexes on frequently quer
 Average query response times (in milliseconds) for our three main questions before and after adding the indexes.
 
 #### What success looks like?
-- Able to display the data to intended users
-- Process the data efficiently 
-- Cache necessary information
+Achieve at least a 50% decrease in average query execution time under simultaneous batch-and-stream load, or maintain sub-50ms query response times.
+
 
 
 
@@ -64,16 +63,18 @@ Average query response times (in milliseconds) for our three main questions befo
 
 
 
-Risk 1: Resource constraints on one laptop: Running Kafka, Spark, PostgreSQL, and Docker together on a single laptop with 8GB of memory could lead to out-of-memory (OOM) errors and resource exhaustion.
+##### Risk 1
+Resource constraints on one laptop: Running Kafka, Spark, PostgreSQL, and Docker together on a single laptop with 8GB of memory could lead to out-of-memory (OOM) errors and resource exhaustion.
 
 
-  Plan: Optimize Spark executor/driver RAM limits, enforce lower Docker memory footprints, use micro-batches for the Kafka stream to maintain low window buffers, and process raw files iteratively.
+  + Plan: Optimize Spark executor/driver RAM limits, enforce lower Docker memory footprints, use micro-batches for the Kafka stream to maintain low window buffers, and process raw files iteratively.
 
 
-Risk 2: Scope and coordination for two people: Completing four complex, end-to-end modules within the project constraints with just a two-person team.
+##### Risk 2
+Scope and coordination for two people: Completing four complex, end-to-end modules within the project constraints with just a two-person team.
 
 
-  Plan: Define strict module interfaces, divide work incrementally, use a shared Git repository with feature branches, and test the ingestion pipeline early using smaller data samples.
+  + Plan: Define strict module interfaces, divide work incrementally, use a shared Git repository with feature branches, and test the ingestion pipeline early using smaller data samples.
 
 
 
