@@ -4,6 +4,8 @@ services:
     ports:
       - "8888:8888" # Jupyter
       - "4040:4040" # Spark UI
+    working_dir: /home/jovyan/work
+    command: start-notebook.py --IdentityProvider.token=''
     volumes:
       - ./:/home/jovyan/work # Project folder is available as work/ inside the container
     env_file:
