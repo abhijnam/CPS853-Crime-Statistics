@@ -20,18 +20,11 @@ As part of Creating Big Data Systems Course Project
 ---
 
 **File Set up**
-> Download the file from the Dataset link given below in the proposal
+> Download the file from the Dataset link given below in the proposal and rename the file to Crime Data.csv
 
-> Copy and paste this command into your file directory (the path should be pointing to the folder /CPS853-Crime-Statistics)
-  `docker compose up -d`
+> Run the file ./start.bat in terminal (Windows) or ./start.sh in terminal (Mac) 
 
-> Go to Docker desktop
-
-> Go to Containers
-
-> Click on 3 dot next to spark and click on view details
-
-> Go to url link starting with 127
+> Edit .env file and include a long password of your choice
 
 ---
 
