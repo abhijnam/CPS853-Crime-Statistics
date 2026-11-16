@@ -7,7 +7,7 @@ As part of Creating Big Data Systems Course Project
 > Have Git installed
 > Clone this repository in local
  >   * Go to Code
- >   * Under Clone - copy url into terminal and type git clone <paste the url>
+ >   * Under Clone - copy url into terminal and type git clone *Insert URL*
 
 **Docker Installation**
 
