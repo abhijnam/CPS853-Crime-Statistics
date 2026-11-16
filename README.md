@@ -1,6 +1,33 @@
 # CPS853-Crime-Statistics
 As part of Creating Big Data Systems Course Project
 
+# Set Up
+
+**Pre-Requisites**
+> Have Git installed
+> Clone this repository in local
+ >   * Go to Code and click on Clone
+ >   * Copy url into terminal and type git clone <paste the url>
+
+**Docker Installation**
+
+> [Windows Installation](https://docs.docker.com/desktop/setup/install/windows-install/)
+> [MacOS Installation](https://docs.docker.com/desktop/setup/install/mac-install/)
+> [Linux Distributions](https://docs.docker.com/engine/install/)
+
+---
+
+**File Set up**
+> Download the file from the Dataset link given below in the proposal
+> Copy and paste this command into your file directory (the path should be pointing to the folder /CPS853-Crime-Statistics)
+  `docker compose up`
+> Go to Docker desktop
+> Go to Containers
+> Click on 3 dot next to spark and click on view details
+> Go to url link starting with 127
+
+---
+
 # Proposal
 
 
