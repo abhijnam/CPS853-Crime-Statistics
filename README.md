@@ -23,7 +23,7 @@ As part of Creating Big Data Systems Course Project
 > Download the file from the Dataset link given below in the proposal
 
 > Copy and paste this command into your file directory (the path should be pointing to the folder /CPS853-Crime-Statistics)
-  `docker compose up`
+  `docker compose up -d`
 
 > Go to Docker desktop
 
